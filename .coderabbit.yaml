@@ -1,3 +1,4 @@
 language: "ja"
 reviews:
   poem: false
+  tone_instruction: "丁寧な日本語でレビューしてください。"
