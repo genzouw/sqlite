@@ -6,8 +6,12 @@ RUN apk add \
   sqlite \
   && rm -f /var/cache/apk/* \
   && addgroup -g 1000 -S sqlite \
-  && adduser -u 1000 -S -G sqlite sqlite \
+  && adduser -D -u 1000 -S -G sqlite sqlite \
+  && mkdir -p /data \
+  && chown sqlite:sqlite /data \
   ;
+
+WORKDIR /data
 
 USER sqlite
 
