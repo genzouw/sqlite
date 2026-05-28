@@ -1,6 +1,6 @@
-FROM alpine:3.11.3
+FROM alpine:3.23.4
 
-LABEL maintainer "genzouw <genzouw@gmail.com>"
+LABEL org.opencontainers.image.authors="genzouw <genzouw@gmail.com>"
 
 RUN apk add --no-cache \
   sqlite \
