@@ -1,4 +1,4 @@
-FROM alpine:3.23.4
+FROM alpine:3.24.1
 
 LABEL org.opencontainers.image.authors="genzouw <genzouw@gmail.com>"
 
