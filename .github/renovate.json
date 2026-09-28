@@ -8,7 +8,6 @@
   "semanticCommitScope": "deps",
   "timezone": "Asia/Tokyo",
   "minimumReleaseAge": "1 day",
-  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "prConcurrentLimit": 5,
   "labels": [
     "dependencies"
@@ -58,6 +57,17 @@
       "addLabels": [
         "docker"
       ]
+    },
+    {
+      "description": [
+        "timestamp を返さないデータソース（GHCR など）の digest 更新は、",
+        "既定の timestamp-required の下では minimumReleaseAge の待機期間を永久に満たせない。",
+        "digest 更新に限って timestamp-optional にし、待機チェックを通過できるようにする。"
+      ],
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "minimumReleaseAgeBehaviour": "timestamp-optional"
     }
   ]
 }
